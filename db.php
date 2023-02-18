@@ -14,26 +14,31 @@ class mysql_db {
   
   /**
    * @var string $HOST MySQL host
+   * @access public
    */
   public $HOST = 'localhost';
   
   /**
    * @var string $USER User to connect to database
+   * @access public
    */
   public $USER = 'root';
   
   /**
    * @var string $PASS Password to connect to database
+   * @access public
    */
   public $PASS = '';
   
   /**
    * @var string $NAME Name of database to connect to
+   * @access public
    */
   public $NAME = 'mysql';
   
   /**
    * @var handler $CONN Dattabase connection handler
+   * @access public
    */
   public $CONN;
   
@@ -44,6 +49,7 @@ class mysql_db {
    *       The constructor will set the HOST, USER, PASS, and NAME variables
    *       and then establish a connection to the database.
    * 
+   * @access public
    * @param string $host Host to connect to
    * @param string $user User to use to connect
    * @param string $pass Password to use to connect
@@ -66,6 +72,7 @@ class mysql_db {
    * @method connect
    * @desc Connect to the MySQL database server.
    * 
+   * @access public
    * @return bool Returns TRUE if connected FALSE if failed
    */
   public function connect() {
@@ -84,6 +91,7 @@ class mysql_db {
    * @method set_db
    * @desc Sets the $NAME and selects that database for the connection.
    *
+   * @access public
    * @param string $name Name of dabatabe to select
    */
   public function set_db($name = '') {
@@ -98,6 +106,7 @@ class mysql_db {
    * @method run_query
    * @desc Run the query provided and return result
    * 
+   * @access public
    * @param $query - Query to be run
    * @return $result - Result returned from database
    */
@@ -115,6 +124,7 @@ class mysql_db {
    * @method db_exists
    * @desc Reports whether or not the database exists.
    * 
+   * @access public
    * @param  string $db_name Name of database to check
    * @return bool            TRUE if database exists FALSE if not
    */
@@ -145,6 +155,7 @@ class mysql_db {
    * @method drop
    * @desc Drop the requested database.
    * 
+   * @access public
    * @param  string $db_name Name of database to drop
    * @return bool            TRUE if databse succesfully droped FALSE if not
    */
@@ -167,6 +178,7 @@ class mysql_db {
    * @method create
    * @desc Create the requested database.
    *
+   * @access public
    * @param  string $db_name Name of database to create
    * @return bool            TRUE if databse succesfully created FALSE if not
    */
@@ -191,7 +203,8 @@ class mysql_db {
    * @method __destruct
    * @desc Deconstructor method, called when class is closed.
    *
-   * The destructor will close the MySQL connection.
+   *       The destructor will close the MySQL connection.
+   * @access public
    */
   public function __destruct() {
     @mysql_close($this->CONN);
