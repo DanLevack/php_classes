@@ -10,14 +10,6 @@
  * @author Dan Levack <dlevack@yahoo.com>
  * @version 1.0
  */
-
-/**
- * Provides access to MySQL databases.
- *
- * This is the msysl_db class file. It will provide a simplified means
- * of connecting to and using a MySQL server.
- */
-
 class mysql_db {
   
   /**
