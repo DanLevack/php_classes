@@ -1,6 +1,6 @@
 Name:       levack-php-classes
 Version:    1
-Release:    1
+Release:    2
 Summary:    PHP class files to be used by other levack packages
 License:    GNU GENERAL PUBLIC LICENSE Version 3
 Requires:   php >= 5.4.16, php-mysql >= 5.4.16
