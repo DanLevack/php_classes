@@ -15,8 +15,9 @@ PHP class files to be used by other levack packages.
 %build
 
 %install
-mkdir -p %{buildroot}/var/lib/levack/php-classes/lib
+mkdir -p %{buildroot}/var/lib/levack/php-classes
 install -m u+rw,g+r,o+r /var/lib/jenkins/workspace/Build_PHP_Classes_RPM/LICENSE %{buildroot}/var/lib/levack/php-classes/LICENSE
+mkdir -p %{buildroot}/var/lib/levack/php-classes/lib
 install -m u+rw,g+r,o+r /var/lib/jenkins/workspace/Build_PHP_Classes_RPM/db.php %{buildroot}/var/lib/levack/php-classes/lib/db.php
 install -m u+rw,g+r,o+r /var/lib/jenkins/workspace/Build_PHP_Classes_RPM/ini_files.php %{buildroot}/var/lib/levack/php-classes/lib/ini_files.php
 install -m u+rw,g+r,o+r /var/lib/jenkins/workspace/Build_PHP_Classes_RPM/ssh.php %{buildroot}/var/lib/levack/php-classes/lib/ssh.php
