@@ -4,6 +4,8 @@ Release:    1
 Summary:    PHP class files to be used by other levack packages
 License:    GNU GENERAL PUBLIC LICENSE Version 3
 Requires:   php >= 5.4.16, php-mysql >= 5.4.16
+URL:        https://github.com/DanLevack/php_classes
+
 %description
 PHP class files to be used by other levack packages.
 
